@@ -61,6 +61,7 @@ def server_TCP():
     TCP服务器端主程序
     :return: None
     """
+    # 绑定socket
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     host = socket.gethostname()
     port = 1234
