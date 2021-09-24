@@ -42,8 +42,6 @@ def tcpLink(sock, addr, user):
             sock.send('1'.encode('utf-8'))
             print('{userName} Login'.format(userName=userName))
             user[userName] = userPassword  # 添加到用户字典
-        # print('userName: {name}'.format(name=userName))
-        # print('userPassword: {password}'.format(password=userPassword))
 
         # 接收用户消息
         while True:
@@ -79,7 +77,6 @@ def server_TCP():
         # 每个连接创建一个线程
         t = threading.Thread(target=tcpLink, args=(sock, addr, user))
         t.start()
-        print(user)
 
 
 if __name__ == '__main__':
